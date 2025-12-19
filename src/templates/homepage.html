@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Recording and Text Submission</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Audio Recording and Text Submission</h1>
+
+      <label for="user-input">Enter Your Name:</label>
+      <input type="text" id="user-input" placeholder="Type something here" />
+
+      <!-- Dropdown menu -->
+      <label for="dropdown">Choose an option:</label>
+      <select id="dropdown">
+        <option value="option1">Machine learning</option>
+        <option value="option2">Software developement</option>
+        <option value="option3">Web Developement</option>
+      </select>
+
+      <!-- Start Recording Button -->
+      <button onclick="submitText()">Submit Text</button>
+
+      <div id="response-container" style="display: none">
+        <p><strong>Response:</strong></p>
+        <p id="response-text"></p>
+      </div>
+    </div>
+
+    <!-- Link to the external JS file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
